@@ -1,0 +1,85 @@
+body {
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff);
+    margin: 0;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    color: #000; /* Black text color */
+}
+
+#game-container {
+    background-color: white;
+    padding: 20px;
+    border-radius: 10px;
+    text-align: center;
+    position: relative; /* Needed for the absolute positioning of the restart button */
+}
+
+.board {
+    display: flex;
+    flex-direction: column;
+}
+
+.hexagon-row {
+    display: flex;
+    justify-content: center;
+}
+
+.cell {
+    width: 100px;
+    height: 115px; /* Adjusted height to maintain hexagon shape */
+    background: linear-gradient(to bottom right, #00c6ff, #0072ff); /* Gradient background */
+    margin: 5px;
+    position: relative;
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%);
+    color: inherit; /* Inherit the color from the parent */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-size: 3em;
+    border: 2px solid white; /* White border */
+}
+
+.modal {
+    display: none; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    z-index: 1; /* Sit on top */
+    left: 0;
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    overflow: auto; /* Enable scroll if needed */
+    background-color: rgba(0, 0, 0, 0.5); /* Black w/ opacity */
+}
+
+.modal-content {
+    background-color: #6b0101; /* Dark red background */
+    margin: auto;
+    padding: 50px; /* Increased padding for a bigger or medium-sized modal */
+    border-radius: 20px; /* Adjusted border radius for a bigger or medium-sized modal */
+    text-align: center;
+    position: absolute;
+    left: 50%;
+    top: 50%;
+    transform: translate(-50%, -50%);
+    clip-path: polygon(50% 0%, 100% 25%, 100% 75%, 50% 100%, 0% 75%, 0% 25%); /* Hexagon shape */
+    color: black; /* Black text color */
+    font-size: 2em; /* Larger font size */
+}
+
+#button-container {
+    display: flex;
+    justify-content: center;
+    margin-top: 20px;
+}
+
+button#newGameButton {
+    padding: 10px 20px; /* Adjust button padding for medium-sized button */
+    font-size: 1.2em; /* Adjust font size for medium-sized button */
+    background-color: #28a745; /* Green button background color */
+    color: #fff; /* White text color */
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+}
